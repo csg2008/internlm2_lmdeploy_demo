@@ -1,0 +1,7 @@
+gradio>4
+transformers
+sentencepiece
+einops
+accelerate
+tiktoken
+lmdeploy==0.3.0
