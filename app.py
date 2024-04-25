@@ -26,9 +26,10 @@ def prepare_model() -> str:
     if os.path.exists(local_model_path):
         return local_model_path
     else:
+        download_model_path = '/home/xlab-app-center/internlm2-chat-1-8b'
+        remote_repo_url = 'https://code.openxlab.org.cn/csg2008/internlm2_chat_1_8b_demo.git'
+
         if not os.path.exists(download_model_path):
-            download_model_path = '/home/xlab-app-center/internlm2-chat-1-8b'
-            remote_repo_url = 'https://code.openxlab.org.cn/csg2008/internlm2_chat_1_8b_demo.git'
             os.system(f'git clone {remote_repo_url} {download_model_path}')
             os.system(f'cd {download_model_path} && git lfs pull')
 
